@@ -14,7 +14,8 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
         sound.PlayOneShot(shootSound);
-        muzzleFlash.Play();
-       // Instantiate(bullet, bulletMaker.transform);
+        muzzleFlash.Play(); 
+        GameObject spawnedBullet = Instantiate(bullet, bulletMaker.transform);
+        spawnedBullet.GetComponent<bullet>().bulletDamage = damage;
     }
 }

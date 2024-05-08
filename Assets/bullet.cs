@@ -6,6 +6,7 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     public float bulletSpeed = 10f;
+    public float bulletDamage;
     [SerializeField] private GameObject bulletHole;
     
     void Update()
@@ -15,7 +16,13 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Instantiate(bulletHole, this.transform);
+        GameObject hole = Instantiate(bulletHole, this.transform);
+        if (other.GetComponent<Target>())
+        {
+            Target hit = other.GetComponent<Target>();
+            hit.Damage(bulletDamage);
+        }
+        
         Destroy(this);
     }
 }
