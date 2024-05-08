@@ -259,6 +259,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7348335246731431289, guid: 05f610bdf72a02c4ea6a96edf7de4e6c, type: 3}
   m_PrefabInstance: {fileID: 40749996}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &40919614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: bc024d1aa5e5b8249b9b313bad3aaa3e, type: 3}
+  m_PrefabInstance: {fileID: 334842419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &40919618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40919614}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2382143, y: 0.36154237, z: 0.4487354}
+  m_Center: {x: 0.000000059604645, y: -0.000000044703484, z: 0.2243677}
 --- !u!1001 &65548149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -529,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 99920391}
-  m_TurnSpeed: 60
+  m_TurnSpeed: 80
   m_LeftHandTurnAction:
     m_UseReference: 0
     m_Action:
@@ -567,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 99920391}
-  m_MoveSpeed: 1
+  m_MoveSpeed: 4
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -1290,7 +1316,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: bc024d1aa5e5b8249b9b313bad3aaa3e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 40919618}
   m_SourcePrefab: {fileID: 100100000, guid: bc024d1aa5e5b8249b9b313bad3aaa3e, type: 3}
 --- !u!1001 &405012694
 PrefabInstance:
@@ -4204,7 +4233,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: -8148491892877670638, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_Reference: {fileID: -2024308242397127297, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_RotationAction:
     m_UseReference: 1
     m_Action:
