@@ -16,7 +16,7 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject hole = Instantiate(bulletHole, this.transform);
+        GameObject hole = Instantiate(bulletHole, this.transform.position, this.transform.rotation);
         if (other.GetComponent<Target>())
         {
             Target hit = other.GetComponent<Target>();
