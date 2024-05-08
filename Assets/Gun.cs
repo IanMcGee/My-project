@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private AudioClip shootSound;
+    [SerializeField] private AudioSource sound;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private GameObject bulletMaker;
+    [SerializeField] private ParticleSystem muzzleFlash;
+    public float damage = 1f;
 
-    // Update is called once per frame
-    void Update()
+    public void Shoot()
     {
-        
+        sound.PlayOneShot(shootSound);
+        muzzleFlash.Play();
+       // Instantiate(bullet, bulletMaker.transform);
     }
 }
