@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    public float bulletSpeed = 10f;
+    public float bulletSpeed = 3f;
     public float bulletDamage;
     [SerializeField] private GameObject bulletHole;
     
     void Update()
     {
-       this.transform.Translate(this.transform.up * (Time.deltaTime * bulletSpeed));
+       this.transform.Translate(this.transform.forward * (Time.deltaTime * bulletSpeed));
     }
 
     private void OnTriggerEnter(Collider other)

@@ -5,13 +5,14 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float health = 1f;
+    
 
     public void Damage(float damage)
     {
         health = health - damage;
         if (health <= 0)
         {
-            //fall down
+           this.GetComponent<Animator>().Play("TargetFall");
         }
     }
 }
