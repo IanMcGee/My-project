@@ -21,8 +21,9 @@ public class bullet : MonoBehaviour
         {
             Target hit = other.GetComponent<Target>();
             hit.Damage(bulletDamage);
+            Destroy(hole.gameObject);
         }
         
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }
