@@ -11,7 +11,7 @@ public class bullet : MonoBehaviour
     
     void Update()
     {
-       this.transform.Translate(this.transform.forward * (Time.deltaTime * bulletSpeed));
+       this.transform.Translate(this.transform.forward * (-1 * (Time.deltaTime * bulletSpeed)));
     }
 
     private void OnTriggerEnter(Collider other)
